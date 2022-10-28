@@ -1,0 +1,466 @@
+windows software
+
+win+l = lock
+fn+space = light
+win + shift + s = snip
+win+ prt sc = screen shot 
+win + e = this pc
+win + i = settings 
+alt + tab = shift tab
+windows + side arrow = spilt screen 
+3 button swipe down minimize
+2 button swipe side=back
+cltrl+F = SEARCH 
+cltr+shift+side arrow = select
+cltrl+a = select all
+cltrl+c = copy 
+cltrl+v= paste
+alt + downarrow = select and move down 
+alt + uparrow = select and move up 
+
+
+java eclipse
+ctrl+fn+f11 = run 
+cltrl + space (suggestions)
+cltrl + shift + F = format
+
+Visual studio
+alt + shift + R = shows the path were the file is present .
+
+
+
+Training 
+
+
+1.Java 
+2. UX/UI - Splash screen
+
+actors(who are the ones who are using this application)
+1.users who are ill and afraid of going out to meet the hospitals.
+2.users who are lazy.
+3.users who know how to use online application and services.
+4.users who need quick medication details to the ones who are residing near them.
+5.users whose house is located in a situation which is far away from the hospital.
+6.users who know the doctors who are using this platform.
+7.users who prefer a wide range of doctors and specialists
+8.users who prefer experienced doctors.
+9.users who want to save thier travel expense.
+10.users who want immediate medication.
+
+Buisness module(Plan strategies for generating revenue for connect my doctor application)
+
+1.advertisement and being active on social media. 
+2.transaction fees.
+3.Simplify customer use of the application providing quick and immediate medication ..
+4.Keep online cost as low as possible include the online fee in the doctor consultancy fee itself.
+5.Connect your online application to social media accounts.
+6. providing premium accounts by giving unlimited online consultancy services.
+7.charging the doctors and hospitals some money for getting listed in the app or the website. This also gives them some revenue
+8.Medication delievery at door step.
+
+
+
+
+
+1) Azure devops.(other tools also like jeera,slack....)
+     work items all the required features will be mentioned there.
+     
+2)work on any IDE
+
+3) upload it to the git repository or any repository
+
+4)Jenkins or any other for CI/CD
+
+
+sonarQube
+to test the quality of the code we use SonarQube.
+Support all lanquages.
+
+Git Lab
+create a branch in the main folder
+
+cloning
+1. create a folder in the desktop 
+right click get git bash here 
+$ git clone -b branchname pasteurl
+enter the new folder 
+create new txt 
+inorder to reflect it in the web use the following commands below
+$ git add .
+$ git commit -m " command"
+$ git status (to check the status)
+$ git push(to reflect it in the web)
+
+$ git pull(if i have made changes in the web(remote) then use pull)
+$ git fetch (if someone else have made changes in the web then we use fetch)
+
+procedure
+creating a project in git lab.
+gitlab is similar to github but has multiple features in it like CI/CD.
+create project option will be available in the profile and all the activities will be there.
+
+project created is in the web(remote area).
+inorder to change it in the local repository we have to clone it .
+
+cloning two process
+1) using git bash
+
+click on the clone option copy the 2nd link . create a folder in the desktop
+right click press get bash here 
+put the clonning command there..
+$ git clone -b branchname "url"
+
+new folder gets created and enter the new folder and right click and create text folder
+edit the text folder
+the text folder doesn't get reflected in the web(remote)
+inorder to reflect in the web
+following steps need to be followed
+1)$ git add .(from local to staging)
+2)$ git commit -m "enter task done"(staging to remote command)
+3)$ git push(staging to remote)
+
+
+2)using IDE platform
+copy link paste it in the clone git repository 
+create folder in desktop
+whatever changes you make in the local repository need to be uploaded in the remote.
+so do
+open terminal 
+1)$ git add .(from local to staging)
+2)$ git commit -m "enter task done"(staging to remote command)
+3)$ git push(staging to remote)
+
+whatever changes you make in the web to be reflected in the local we use 
+$ git push
+
+whatever changes made by others in the web to be reflected in the local we use 
+$ git fetch
+
+inorder to obtain the status we do 
+$ git status
+
+inorder to create a branch in the local and upload it in the web we do
+$ git branch "branch name"
+
+or directly do create branch in the command prompt
+and then do add, commit and push.
+
+we can do all the three commands together at a single time.
+
+merge conflict.
+
+
+
+
+
+
+my SQL Database
+create database studentsinfo;
+
+
+
+use studentsinfo;
+
+
+
+CREATE TABLE Students
+(
+StudentID int primary key unique,
+StudentName varchar(255) not null,
+ParentName varchar(255),
+Address varchar(255),
+PostalCode int,
+City varchar(255)
+);
+
+
+
+create table student1 as
+select StudentName, ParentName from students;
+
+
+
+alter table students add dateOfBirth date;
+
+
+
+drop table student1;
+
+
+
+truncate table students;
+
+
+
+insert into students(StudentID, StudentName, ParentName, Address, City, PostalCode, dateOfBirth)
+values('06', 'Sanjana','Jagannath', 'Banjara Hills', 'Hyderabad', '500046', '2002-01-02');
+
+
+
+insert into students
+values('07', 'Shivantini','Praveen', 'Camel Street', '700096', 'Kolkata', '2005-01-05');
+
+
+
+update students set StudentName ="Sanjay" where StudentId ='6';
+
+
+
+delete from students where StudentId='7';
+
+
+
+select StudentId, StudentName from students;
+
+
+
+select * from students;
+
+
+
+select distinct city from students;
+
+
+
+select * from students order by ParentName;
+
+
+
+select * from students order by ParentName asc;
+
+
+
+select * from students order by ParentName desc;
+
+
+
+select count(StudentId), city from students group by city;
+
+
+
+select count(StudentId), city from students group by city order by city desc;
+
+
+
+select * from students where StudentId=1;
+
+
+
+select count(StudentId), city from students group by city having count(StudentId) > 1;
+
+
+
+select * from students where studentId between '1' and '5';
+
+
+
+select * from students where ParentName like 'V%';
+
+2.answers
+
+Get all the predictions
+select * from cardiodiagnosis;
+
+
+
+-- Get all the predictions for the day
+select date, cardioarrestdetected from cardiodiagnosis;
+
+
+
+-- Get all the predictions for the day and sort it
+-- based on highest percentage of probability at the top
+select sum(cardioarrestdetected), date from cardiodiagnosis group by date order by cardioarrestdetected desc;
+
+
+
+tasks:
+
+10 select queries - use  any operations
+Heartihealth - 10 Queries
+Salesorder - 25 queries
+https://www.mysqltutorial.org/install-mysql/ - installation guide
+
+
+
+
+
+HTML
+
+whenver you write in html save it in .html extension.
+then press shift+! you will get the normal syntax
+keywords
+&emsp = 4 spaces
+$nbsp = 1 space
+<b> bold
+<br>=break
+<hr>=line
+
+for running
+write a code > run > start debugging > in browser mode
+or install live servor > Go live > in browser > localhost:portnumber
+install prettie for line format to use it use right click > open document with > use the format 
+
+
+Borders
+
+<border>
+<tr>(racg row)
+<td>(column)</td>
+</tr>
+</border>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>table creation</title>
+</head>
+<style>
+    th{
+        text-align:center;
+        color: red;
+        background-color: black;
+    }
+    td{
+        text-align:center;
+        
+        
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>designation</th>
+            <th>address</th>
+            <th>phone number</th>
+            <th>place of work</th>
+        </tr>
+        <tr>
+            <td>Kiran Kumar</td>
+            <td>Associate Developer</td>
+            <td>Vasudha compound Vivekananda nagar<br>B  11th cross road kodikal Mangalore</td>
+            <td>7090853962</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>vinay</td>
+            <td>Associate Developer</td>
+            <td>Vasudha compound Vivekananda nagar<br>B  11th cross road kodikal Mangalore</td>
+            <td>999999999</td>
+            <td>Bangalore</td>
+        </tr>
+
+    </table>
+</body>
+</html>
+
+2.Rowspan & colspan
+
+Rowspan and colspan can be applied to td only 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>table creation</title>
+</head>
+<style>
+    th{
+        text-align:center;
+        color: red;
+        background-color: black;
+    }
+    td{
+        text-align:center;
+        
+        
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>designation</th>
+            <th>address</th>
+            <th>phone number</th>
+            <th>place of work</th>
+        </tr>
+        <tr>
+            <td>Kiran Kumar</td>
+            <td>Associate Developer</td>
+            <td>Vasudha compound Vivekananda nagar<br>B  11th cross road kodikal Mangalore</td>
+            <td>7090853962</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>vinay</td>
+            <td>Associate Developer</td>
+            <td>Vasudha compound Vivekananda nagar<br>B  11th cross road kodikal Mangalore</td>
+            <td>999999999</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+        <td colspan="5">Details of new joined</td>
+    </tr>
+
+    </table>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>table creation</title>
+</head>
+<style>
+    th{
+        text-align:center;
+        color: red;
+        background-color: black;
+    }
+    td{
+        text-align:center;
+        
+        
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>designation</th>
+            <th>address</th>
+            <th>phone number</th>
+            <th>place of work</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Kiran Kumar</td>
+            <td>Associate Developer</td>
+            <td>Vasudha compound Vivekananda nagar<br>B  11th cross road kodikal Mangalore</td>
+            <td>7090853962</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            
+            <td>Associate Developer</td>
+            <td>Vasudha compound Vivekananda nagar<br>B  11th cross road kodikal Mangalore</td>
+            <td>999999999</td>
+            <td>Bangalore</td>
+        </tr>
+       
+
+    </table>
+</body>
+</html>
+
+Right clck format document with select the extension you downloaded.
+
+
+
+
+
+
